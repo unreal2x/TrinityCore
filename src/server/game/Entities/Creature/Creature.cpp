@@ -1874,8 +1874,7 @@ void Creature::Respawn(bool force)
             if (m_spawnId)
                 GetMap()->RemoveCreatureRespawnTime(m_spawnId);
 
-            TC_LOG_DEBUG("entities.unit", "Respawning creature %s (%s)",
-                GetName().c_str(), GetGUID().ToString().c_str());
+            TC_LOG_DEBUG("entities.unit", "Respawning creature %s (%s)", GetName().c_str(), GetGUID().ToString().c_str());
             m_respawnTime = 0;
             ResetPickPocketRefillTimer();
             loot.clear();
@@ -1905,7 +1904,6 @@ void Creature::Respawn(bool force)
                 AI()->Reset();
                 m_TriggerJustRespawned = true;//delay event to next tick so all creatures are created on the map before processing
             }
-
 
             uint32 poolid = GetSpawnId() ? sPoolMgr->IsPartOfAPool<Creature>(GetSpawnId()) : 0;
             if (poolid)
@@ -3195,16 +3193,17 @@ void Creature::ClearTextRepeatGroup(uint8 textGroup)
 
 bool Creature::IsEscortNPC(bool isEscorting)
 {
-    if (GetAI())
-    {
-        if (npc_escortAI* escortAI = dynamic_cast<npc_escortAI*> (AI()))
-        {
-            if (!isEscorting)
-                return true;
+    if (!GetAI())
+        return false;
 
-            if (escortAI->GetEventStarterGUID())
-                return true;
-        }
+    if (npc_escortAI* escortAI = dynamic_cast<npc_escortAI*> (AI()))
+    {
+        if (!isEscorting)
+            return true;
+
+        if (escortAI->GetEventStarterGUID())
+            return true;
     }
+
     return false;
 }
