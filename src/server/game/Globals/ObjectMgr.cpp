@@ -9572,7 +9572,7 @@ CreatureTemplate const* ObjectMgr::GetCreatureTemplate(uint32 entry) const
     return nullptr;
 }
 
-uint32 ObjectMgr::GetCreaturesInGroup(uint32 groupid, std::vector<uint32>& creatureList)
+uint32 ObjectMgr::GetCreaturesInGroup(uint32 groupid, std::vector<ObjectGuid::LowType>& creatureList)
 {
     auto groupBounds = _creatureGroupMapStore.equal_range(groupid);
     for (auto itr = groupBounds.first; itr != groupBounds.second; ++itr)
@@ -9581,7 +9581,7 @@ uint32 ObjectMgr::GetCreaturesInGroup(uint32 groupid, std::vector<uint32>& creat
     return creatureList.size();
 }
 
-uint32 ObjectMgr::GetGameObjectsInGroup(uint32 groupid, std::vector<uint32>& gameobjectList)
+uint32 ObjectMgr::GetGameObjectsInGroup(uint32 groupid, std::vector<ObjectGuid::LowType>& gameobjectList)
 {
     auto groupBounds = _gameObjectGroupMapStore.equal_range(groupid);
     for (auto itr = groupBounds.first; itr != groupBounds.second; ++itr)

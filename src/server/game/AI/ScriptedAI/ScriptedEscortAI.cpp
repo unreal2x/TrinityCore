@@ -607,3 +607,14 @@ bool npc_escortAI::GetWaypointPosition(uint32 pointId, float& x, float& y, float
 
     return false;
 }
+
+bool npc_escortAI::IsEscortNPC(bool isEscorting)
+{
+    if (!isEscorting)
+        return true;
+
+    if (GetEventStarterGUID())
+        return true;
+
+    return false;
+}

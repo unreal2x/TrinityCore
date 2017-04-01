@@ -40,8 +40,6 @@
 #include "Player.h"
 #include "PoolMgr.h"
 #include "QuestDef.h"
-#include "ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
 #include "SpellAuraEffects.h"
 #include "SpellMgr.h"
 #include "TemporarySummon.h"
@@ -976,11 +974,6 @@ bool Creature::Create(ObjectGuid::LowType guidlow, Map* map, uint32 phaseMask, u
     SetMap(map);
     SetPhaseMask(phaseMask, false);
 
-    if (!sWorld->isGuidAlert() && guidlow > sWorld->getIntConfig(CONFIG_RESPAWN_GUIDALERTLEVEL))
-        sWorld->TriggerGuidAlert();
-    else if (!sWorld->isGuidWarning() && guidlow > sWorld->getIntConfig(CONFIG_RESPAWN_GUIDWARNLEVEL))
-        sWorld->TriggerGuidWarning();
-
     // Set if this creature can handle dynamic spawns
     if (!dynamic)
         SetRespawnCompatibilityMode();
@@ -1524,12 +1517,9 @@ bool Creature::LoadCreatureFromDB(ObjectGuid::LowType spawnId, Map* map, bool ad
 
     m_respawnTime = GetMap()->GetCreatureRespawnTime(m_spawnId);
 
-    if (m_respawnCompatibilityMode)
-    {
-        // Is the creature script objecting to us spawning? If yes, delay by one second (then re-check in ::Update)
-        if (!m_respawnCompatibilityMode && !m_respawnTime && !sScriptMgr->CanSpawn(spawnId, GetEntry(), GetCreatureTemplate(), GetCreatureData(), map))
-            m_respawnTime = time(NULL) + 1;
-    }
+    // Is the creature script objecting to us spawning? If yes, delay by one second (then re-check in ::Update)
+    if (m_respawnCompatibilityMode && !m_respawnTime && !sScriptMgr->CanSpawn(spawnId, GetEntry(), GetCreatureTemplate(), GetCreatureData(), map))
+        m_respawnTime = time(NULL) + 1;
 
     if (m_respawnTime)                          // respawn on Update
     {
@@ -3222,17 +3212,8 @@ void Creature::ClearTextRepeatGroup(uint8 textGroup)
 
 bool Creature::IsEscortNPC(bool isEscorting)
 {
-    if (!GetAI())
+    if (!AI())
         return false;
 
-    if (npc_escortAI* escortAI = dynamic_cast<npc_escortAI*> (AI()))
-    {
-        if (!isEscorting)
-            return true;
-
-        if (escortAI->GetEventStarterGUID())
-            return true;
-    }
-
-    return false;
+    return AI()->IsEscortNPC(isEscorting);
 }

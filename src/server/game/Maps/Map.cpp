@@ -2947,48 +2947,48 @@ void Map::RemoveGORespawnTime(ObjectGuid::LowType spawnId, uint32 cellAreaZoneId
     }
 }
 
-void Map::addRespawnInfo(respawnInfoMultiMap& gridList, respawnInfoMultiMap& cellAreaZoneList, respawnInfoMap& spawnList, RespawnInfo& Info, bool replace)
+void Map::AddRespawnInfo(RespawnInfoMultiMap& gridList, RespawnInfoMultiMap& cellAreaZoneList, RespawnInfoMap& spawnList, RespawnInfo& info, bool replace)
 {
-    if (!Info.spawnId)
+    if (!info.spawnId)
         return;
 
     // Uniqueness checked on the spawnList as master key
-    if (spawnList.find(Info.spawnId) == spawnList.end())
+    if (spawnList.find(info.spawnId) == spawnList.end())
     {
         RespawnInfo* ri = new RespawnInfo();
-        *ri = Info;
-        spawnList[Info.spawnId] = ri;
-        gridList.insert(std::pair<uint32, RespawnInfo*>(Info.gridId, ri));
-        cellAreaZoneList.insert(std::pair<uint32, RespawnInfo*>(Info.cellAreaZoneId, ri));
+        *ri = info;
+        spawnList[info.spawnId] = ri;
+        gridList.insert(std::pair<uint32, RespawnInfo*>(info.gridId, ri));
+        cellAreaZoneList.insert(std::pair<uint32, RespawnInfo*>(info.cellAreaZoneId, ri));
         return;
     }
     else if (!replace)
     {
         // If a spawn is found, and we're not blindly replacing
         // Check if it is before our planned time. Only replace if not
-        RespawnInfo* ri = spawnList[Info.spawnId];
-        if (ri->originalRespawnTime > Info.originalRespawnTime)
+        RespawnInfo* ri = spawnList[info.spawnId];
+        if (ri->originalRespawnTime > info.originalRespawnTime)
         {
-            deleteRespawnInfo(gridList, cellAreaZoneList, spawnList, Info.spawnId, 0, 0, false);
-            addRespawnInfo(gridList, cellAreaZoneList, spawnList, Info, false);
+            DeleteRespawnInfo(gridList, cellAreaZoneList, spawnList, info.spawnId, 0, 0, false);
+            AddRespawnInfo(gridList, cellAreaZoneList, spawnList, info, false);
         }
         else
         {
             // Otherwise update respawn entry to this earlier time
             // This is really only so the DB is updated correctly
-            Info.originalRespawnTime = ri->originalRespawnTime;
+            info.originalRespawnTime = ri->originalRespawnTime;
         }
     }
 
     if (replace)
     {
         // In case of replace, delete this spawn ID everywhere, then self call with no replace
-        deleteRespawnInfo(gridList, cellAreaZoneList, spawnList, Info.spawnId, 0, 0, false);
-        addRespawnInfo(gridList, cellAreaZoneList, spawnList, Info, false);
+        DeleteRespawnInfo(gridList, cellAreaZoneList, spawnList, info.spawnId, 0, 0, false);
+        AddRespawnInfo(gridList, cellAreaZoneList, spawnList, info, false);
     }
 }
 
-bool Map::getRespawnInfo(respawnInfoMultiMap const& gridList, respawnInfoMultiMap const& cellAreaZoneList, respawnInfoMap const& spawnList, RespawnVector& RespawnData, ObjectGuid::LowType spawnId, uint32 gridId, uint32 cellAreaZoneId, bool onlyDue)
+bool Map::GetRespawnInfo(RespawnInfoMultiMap const& gridList, RespawnInfoMultiMap const& cellAreaZoneList, RespawnInfoMap const& spawnList, RespawnVector& respawnData, ObjectGuid::LowType spawnId, uint32 gridId, uint32 cellAreaZoneId, bool onlyDue)
 {
     // If no criteria passed, then return either due respawns, or all respawns
     if (!spawnId && !gridId && !cellAreaZoneId)
@@ -2996,10 +2996,10 @@ bool Map::getRespawnInfo(respawnInfoMultiMap const& gridList, respawnInfoMultiMa
         if (spawnList.begin() == spawnList.end())
             return false;
 
-        for (respawnInfoMap::const_iterator iter = spawnList.begin(); iter != spawnList.end();)
+        for (RespawnInfoMap::const_iterator iter = spawnList.begin(); iter != spawnList.end();)
         {
             if (!onlyDue || time(NULL) >= iter->second->respawnTime)
-                RespawnData.push_back(iter->second);
+                respawnData.push_back(iter->second);
             ++iter;
         }
         return true;
@@ -3007,13 +3007,13 @@ bool Map::getRespawnInfo(respawnInfoMultiMap const& gridList, respawnInfoMultiMa
 
     if (spawnId)
     {
-        respawnInfoMap::const_iterator iter = spawnList.find(spawnId);
+        RespawnInfoMap::const_iterator iter = spawnList.find(spawnId);
         if (iter == spawnList.end())
             return false;
 
         if (!onlyDue || time(NULL) >= iter->second->respawnTime)
         {
-            RespawnData.push_back(iter->second);
+            respawnData.push_back(iter->second);
             return true;
         }
     }
@@ -3027,11 +3027,11 @@ bool Map::getRespawnInfo(respawnInfoMultiMap const& gridList, respawnInfoMultiMa
         if (spawnBounds.first == spawnBounds.second)
             return false;
 
-        for (respawnInfoMap::const_iterator iter = spawnBounds.first; iter != spawnBounds.second;)
+        for (RespawnInfoMap::const_iterator iter = spawnBounds.first; iter != spawnBounds.second;)
         {
             if (!onlyDue || time(NULL) >= iter->second->respawnTime)
             {
-                RespawnData.push_back(iter->second);
+                respawnData.push_back(iter->second);
             }
             ++iter;
         }
@@ -3041,14 +3041,14 @@ bool Map::getRespawnInfo(respawnInfoMultiMap const& gridList, respawnInfoMultiMa
     return false;
 }
 
-void Map::deleteRespawnInfo(respawnInfoMultiMap& gridList, respawnInfoMultiMap& cellAreaZoneList, respawnInfoMap& spawnList, ObjectGuid::LowType spawnId, uint32 gridId, uint32 cellAreaZoneId, bool onlyDue)
+void Map::DeleteRespawnInfo(RespawnInfoMultiMap& gridList, RespawnInfoMultiMap& cellAreaZoneList, RespawnInfoMap& spawnList, ObjectGuid::LowType spawnId, uint32 gridId, uint32 cellAreaZoneId, bool onlyDue)
 {
     // For delete, a bit more important to ensure only one present (or none to erase all)
     if ((spawnId && (gridId || cellAreaZoneId)) || (gridId && (spawnId || cellAreaZoneId)) || (cellAreaZoneId && (spawnId || gridId)))
         ASSERT("too many active parameters passed to Map::deleteRespawnInfo");
 
     RespawnVector rv;
-    if (getRespawnInfo(gridList, cellAreaZoneList, spawnList, rv, spawnId, gridId, cellAreaZoneId, onlyDue))
+    if (GetRespawnInfo(gridList, cellAreaZoneList, spawnList, rv, spawnId, gridId, cellAreaZoneId, onlyDue))
     {
         // Iterate through all elements to delete
         for (RespawnInfo* ri : rv)
@@ -3082,10 +3082,10 @@ void Map::deleteRespawnInfo(respawnInfoMultiMap& gridList, respawnInfoMultiMap& 
     }
 }
 
-void Map::RespawnCreatureList(RespawnVector const& RespawnData, bool force)
+void Map::RespawnCreatureList(RespawnVector const& respawnData, bool force)
 {
     SQLTransaction trans = CharacterDatabase.BeginTransaction();
-    for (RespawnInfo* ri : RespawnData)
+    for (RespawnInfo* ri : respawnData)
     {
         // Don't spawn if already there and alive (can happen if grid reloaded)
         // Need to find all for this spawn ID
@@ -3281,13 +3281,13 @@ void Map::RespawnCellAreaZone(uint32 cellId, uint32 zoneId, uint32 areaId)
     }
 }
 
-void Map::transformRespawnList(RespawnVector& RespawnData, uint32 numPlayers, float adjustFactor, uint32 minAdjustSpawn, uint32 mode)
+void Map::TransformRespawnList(RespawnVector& respawnData, uint32 numPlayers, float adjustFactor, uint32 minAdjustSpawn, uint32 mode)
 {
     // If only one player found, no adjustment to be made
     if (numPlayers == 1)
         return;
 
-    for (RespawnInfo* ri : RespawnData)
+    for (RespawnInfo* ri : respawnData)
     {
         switch (mode)
         {
@@ -3387,16 +3387,16 @@ void Map::RespawnCellAreaZoneCreature(uint32 cellZoneAreaId)
     switch (sWorld->getIntConfig(CONFIG_RESPAWN_ACTIVITYSCOPEGAMEOBJECT))
     {
         case RESPAWNSCOPE_CELL:
-            if (getRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, 0, sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
+            if (GetRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, 0, sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
             break;
         case RESPAWNSCOPE_AREA:
-            if (getRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, _areaPlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
+            if (GetRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, _areaPlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
             break;
         case RESPAWNSCOPE_ZONE:
-            if (getRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, _zonePlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
+            if (GetRespawnInfo(_creatureRespawnTimesByGridId, _creatureRespawnTimesByCellAreaZoneId, _creatureRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, _zonePlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_CREATURE), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_CREATURE), RESPAWNMODE_CREATURE);
             break;
     }
 
@@ -3419,16 +3419,16 @@ void Map::RespawnCellAreaZoneGameObject(uint32 cellZoneAreaId)
     switch (sWorld->getIntConfig(CONFIG_RESPAWN_ACTIVITYSCOPEGAMEOBJECT))
     {
         case RESPAWNSCOPE_CELL:
-            if (getRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, 0, sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
+            if (GetRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, 0, sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
             break;
         case RESPAWNSCOPE_AREA:
-            if (getRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, _areaPlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
+            if (GetRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, _areaPlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
             break;
         case RESPAWNSCOPE_ZONE:
-            if (getRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
-                transformRespawnList(rv, _zonePlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
+            if (GetRespawnInfo(_gameObjectRespawnTimesByGridId, _gameObjectRespawnTimesByCellAreaZoneId, _gameObjectRespawnTimesBySpawnId, rv, 0, 0, cellZoneAreaId, false))
+                TransformRespawnList(rv, _zonePlayerCountMap[cellZoneAreaId], sWorld->getFloatConfig(CONFIG_RESPAWN_DYNAMICRATE_GAMEOBJECT), sWorld->getIntConfig(CONFIG_RESPAWN_DYNAMICMINIMUM_GAMEOBJECT), RESPAWNMODE_GAMEOBJECT);
             break;
     }
 
@@ -3440,25 +3440,25 @@ void Map::RespawnCellAreaZoneGameObject(uint32 cellZoneAreaId)
 bool Map::GetRespawnData(RespawnVector& results, RespawnObjectType type, bool onlyDue, ObjectGuid::LowType spawnId, uint32 grid, bool allMap, float x, float y, float z)
 {
     // Obtain references to appropriate respawn stores
-    respawnInfoMultiMap const& gridList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesByGridId : _gameObjectRespawnTimesByGridId;
-    respawnInfoMultiMap const& scopeList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesByCellAreaZoneId : _gameObjectRespawnTimesByCellAreaZoneId;
-    respawnInfoMap const& spawnIdList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesBySpawnId : _gameObjectRespawnTimesBySpawnId;
+    RespawnInfoMultiMap const& gridList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesByGridId : _gameObjectRespawnTimesByGridId;
+    RespawnInfoMultiMap const& scopeList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesByCellAreaZoneId : _gameObjectRespawnTimesByCellAreaZoneId;
+    RespawnInfoMap const& spawnIdList = (type == OBJECT_TYPE_CREATURE) ? _creatureRespawnTimesBySpawnId : _gameObjectRespawnTimesBySpawnId;
 
     // Spawn ID supplied
     if (spawnId)
     {
-        return getRespawnInfo(gridList, scopeList, spawnIdList, results, spawnId, 0, 0, onlyDue);
+        return GetRespawnInfo(gridList, scopeList, spawnIdList, results, spawnId, 0, 0, onlyDue);
     }
 
     // All map, or grid only
     if (grid || allMap)
     {
-        return getRespawnInfo(gridList, scopeList, spawnIdList, results, 0, grid, 0, onlyDue);
+        return GetRespawnInfo(gridList, scopeList, spawnIdList, results, 0, grid, 0, onlyDue);
     }
 
     // By scope
     uint32 zoneAreaCellId = GetZoneAreaGridId(type, x, y, z);
-    return getRespawnInfo(gridList, scopeList, spawnIdList, results, 0, 0, zoneAreaCellId, onlyDue);
+    return GetRespawnInfo(gridList, scopeList, spawnIdList, results, 0, 0, zoneAreaCellId, onlyDue);
 }
 
 uint32 Map::GetPlayersInRangeOfPosition(Position const* pos, uint32 phaseMask, float range, std::list<Player*>& playerList)
@@ -4280,12 +4280,12 @@ void Map::UpdateIteratorBack(Player* player)
         m_mapRefIter = m_mapRefIter->nocheck_prev();
 }
 
-void Map::SaveCreatureRespawnTime(ObjectGuid::LowType spawnId, uint32 entry, time_t respawnTime, uint32 cellAreaZoneId, uint32 gridId, bool WriteDB, bool replace, SQLTransaction respawntrans)
+void Map::SaveCreatureRespawnTime(ObjectGuid::LowType spawnId, uint32 entry, time_t respawnTime, uint32 cellAreaZoneId, uint32 gridId, bool writeDB, bool replace, SQLTransaction respawnTrans)
 {
     if (!respawnTime)
     {
         // Delete only
-        RemoveCreatureRespawnTime(spawnId, 0, 0, false, respawntrans);
+        RemoveCreatureRespawnTime(spawnId, 0, 0, false, respawnTrans);
         return;
     }
 
@@ -4300,13 +4300,13 @@ void Map::SaveCreatureRespawnTime(ObjectGuid::LowType spawnId, uint32 entry, tim
     ri.spawnDelay = respawnTime > timeNow ? respawnTime - timeNow : 0;
     AddCreatureRespawnInfo(ri, replace);
 
-    if (!WriteDB)
+    if (!writeDB)
         return;
 
-    SaveCreatureRespawnTimeDB(spawnId, ri.originalRespawnTime, respawntrans);
+    SaveCreatureRespawnTimeDB(spawnId, ri.originalRespawnTime, respawnTrans);
 }
 
-void Map::SaveCreatureRespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnTime, SQLTransaction respawntrans)
+void Map::SaveCreatureRespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnTime, SQLTransaction respawnTrans)
 {
     // Just here for support of compatibility mode
     PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_CREATURE_RESPAWN);
@@ -4314,18 +4314,18 @@ void Map::SaveCreatureRespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnT
     stmt->setUInt32(1, uint32(respawnTime));
     stmt->setUInt16(2, GetId());
     stmt->setUInt32(3, GetInstanceId());
-    if (respawntrans)
-        respawntrans->Append(stmt);
+    if (respawnTrans)
+        respawnTrans->Append(stmt);
     else
         CharacterDatabase.Execute(stmt);
 }
 
-void Map::SaveGORespawnTime(ObjectGuid::LowType spawnId, uint32 entry, time_t respawnTime, uint32 cellAreaZoneId, uint32 gridId, bool WriteDB, bool replace, SQLTransaction respawntrans)
+void Map::SaveGORespawnTime(ObjectGuid::LowType spawnId, uint32 entry, time_t respawnTime, uint32 cellAreaZoneId, uint32 gridId, bool writeDB, bool replace, SQLTransaction respawnTrans)
 {
     if (!respawnTime)
     {
         // Delete only
-        RemoveGORespawnTime(spawnId, 0, 0, false, respawntrans);
+        RemoveGORespawnTime(spawnId, 0, 0, false, respawnTrans);
         return;
     }
 
@@ -4340,10 +4340,10 @@ void Map::SaveGORespawnTime(ObjectGuid::LowType spawnId, uint32 entry, time_t re
     ri.spawnDelay = respawnTime > timeNow ? respawnTime - timeNow : 0;
     AddGameObjectRespawnInfo(ri, replace);
 
-    if (!WriteDB)
+    if (!writeDB)
         return;
 
-    SaveGORespawnTimeDB(spawnId, ri.originalRespawnTime, respawntrans);
+    SaveGORespawnTimeDB(spawnId, ri.originalRespawnTime, respawnTrans);
 }
 
 void Map::SaveGORespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnTime, SQLTransaction respawntrans)

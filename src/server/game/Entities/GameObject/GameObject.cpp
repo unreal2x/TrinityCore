@@ -231,11 +231,6 @@ bool GameObject::Create(ObjectGuid::LowType guidlow, uint32 name_id, Map* map, u
     ASSERT(map);
     SetMap(map);
 
-    if (!sWorld->isGuidAlert() && guidlow > sWorld->getIntConfig(CONFIG_RESPAWN_GUIDALERTLEVEL))
-        sWorld->TriggerGuidAlert();
-    else if (!sWorld->isGuidWarning() && guidlow > sWorld->getIntConfig(CONFIG_RESPAWN_GUIDWARNLEVEL))
-        sWorld->TriggerGuidWarning();
-
     Relocate(pos);
     m_stationaryPosition.Relocate(pos);
     if (!IsPositionValid())

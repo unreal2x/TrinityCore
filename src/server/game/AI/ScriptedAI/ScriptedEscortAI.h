@@ -104,6 +104,7 @@ struct TC_GAME_API npc_escortAI : public ScriptedAI
         bool GetAttack() const { return m_bIsActiveAttacker; }//used in EnterEvadeMode override
         void SetCanAttack(bool attack) { m_bIsActiveAttacker = attack; }
         ObjectGuid GetEventStarterGUID() const { return m_uiPlayerGUID; }
+        bool IsEscortNPC(bool isEscorting);
 
     protected:
         Player* GetPlayerForEscort() { return ObjectAccessor::GetPlayer(*me, m_uiPlayerGUID); }
