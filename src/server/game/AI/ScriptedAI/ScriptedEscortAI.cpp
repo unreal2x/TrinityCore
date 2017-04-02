@@ -608,7 +608,7 @@ bool npc_escortAI::GetWaypointPosition(uint32 pointId, float& x, float& y, float
     return false;
 }
 
-bool npc_escortAI::IsEscortNPC(bool isEscorting)
+bool npc_escortAI::IsEscortNPC(bool isEscorting) const
 {
     if (!isEscorting)
         return true;
