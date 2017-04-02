@@ -3464,7 +3464,7 @@ bool Map::GetRespawnData(RespawnVector& results, RespawnObjectType type, bool on
 uint32 Map::GetPlayersInRangeOfPosition(Position const* pos, uint32 phaseMask, float range, std::list<Player*>& playerList)
 {
     Trinity::AnyPlayerInPositionRangeCheck checker(pos, range);
-    Trinity::PlayerListSearcherByPosition<Trinity::AnyPlayerInPositionRangeCheck> searcher(phaseMask, playerList, checker);
+    Trinity::PlayerListSearcher<Trinity::AnyPlayerInPositionRangeCheck> searcher(phaseMask, playerList, checker);
     VisitWorld(pos->GetPositionX(), pos->GetPositionY(), range, searcher);
     return playerList.size();
 }

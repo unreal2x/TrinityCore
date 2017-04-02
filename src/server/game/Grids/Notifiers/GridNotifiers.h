@@ -560,26 +560,15 @@ namespace Trinity
             : ContainerInserter<Player*>(container),
               i_phaseMask(searcher->GetPhaseMask()), i_check(check) { }
 
-        void Visit(PlayerMapType &m);
-
-        template<class NOT_INTERESTED> void Visit(GridRefManager<NOT_INTERESTED> &) { }
-    };
-
-    template<class Check>
-    struct PlayerListSearcherByPosition
-    {
-        uint32 i_phaseMask;
-        std::list<Player*> &i_objects;
-        Check& i_check;
-
-        PlayerListSearcherByPosition(uint32 phaseMask, std::list<Player*> &objects, Check & check)
-            : i_phaseMask(phaseMask), i_objects(objects), i_check(check) { }
+        template<typename Container>
+        PlayerListSearcher(uint32 phaseMask, Container& container, Check & check)
+            : ContainerInserter<Player*>(container),
+              i_phaseMask(phaseMask), i_check(check) { }
 
         void Visit(PlayerMapType &m);
 
         template<class NOT_INTERESTED> void Visit(GridRefManager<NOT_INTERESTED> &) { }
     };
-
 
     template<class Check>
     struct PlayerLastSearcher
