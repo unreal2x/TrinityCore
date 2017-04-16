@@ -4311,7 +4311,7 @@ void Map::SaveCreatureRespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnT
     // Just here for support of compatibility mode
     PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_CREATURE_RESPAWN);
     stmt->setUInt32(0, spawnId);
-    stmt->setUInt32(1, uint32(respawnTime));
+    stmt->setUInt64(1, uint64(respawnTime));
     stmt->setUInt16(2, GetId());
     stmt->setUInt32(3, GetInstanceId());
     if (respawnTrans)
@@ -4350,7 +4350,7 @@ void Map::SaveGORespawnTimeDB(ObjectGuid::LowType spawnId, time_t respawnTime, S
 {
     PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_GO_RESPAWN);
     stmt->setUInt32(0, spawnId);
-    stmt->setUInt32(1, uint32(respawnTime));     // Note, use from ri, in case it was changed during add process
+    stmt->setUInt64(1, uint64(respawnTime));     // Note, use from ri, in case it was changed during add process
     stmt->setUInt16(2, GetId());
     stmt->setUInt32(3, GetInstanceId());
     if (respawntrans)
@@ -4389,7 +4389,7 @@ void Map::LoadRespawnTimes()
         {
             Field* fields = result->Fetch();
             ObjectGuid::LowType loguid = fields[0].GetUInt32();
-            uint32 respawnTime = fields[1].GetUInt32();
+            uint64 respawnTime = fields[1].GetUInt64();
 
             if (CreatureData const* cdata = sObjectMgr->GetCreatureData(loguid))
                 SaveCreatureRespawnTime(loguid, cdata->id, time_t(respawnTime), GetZoneAreaGridId(OBJECT_TYPE_CREATURE, cdata->posX, cdata->posY, cdata->posZ), Trinity::ComputeGridCoord(cdata->posX, cdata->posY).GetId(), false);
@@ -4406,7 +4406,7 @@ void Map::LoadRespawnTimes()
         {
             Field* fields = result->Fetch();
             ObjectGuid::LowType loguid = fields[0].GetUInt32();
-            uint32 respawnTime = fields[1].GetUInt32();
+            uint64 respawnTime = fields[1].GetUInt64();
 
             if (GameObjectData const* godata = sObjectMgr->GetGOData(loguid))
                 SaveGORespawnTime(loguid, godata->id, time_t(respawnTime), GetZoneAreaGridId(OBJECT_TYPE_GAMEOBJECT, godata->posX, godata->posY, godata->posZ), Trinity::ComputeGridCoord(godata->posX, godata->posY).GetId(), false);
