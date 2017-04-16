@@ -620,7 +620,7 @@ void Creature::Update(uint32 diff)
                     else
                     {
                         // else copy time from master and add a little
-                        time_t baseRespawnTime = std::max(linkedRespawntime, now);
+                        time_t baseRespawnTime = std::max(linkedRespawnTime, now);
                         time_t const offset = urand(5, MINUTE);
 
                         // linked guid can be a boss, uses std::numeric_limits<time_t>::max to never respawn in that instance
