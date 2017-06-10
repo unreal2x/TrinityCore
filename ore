@@ -1,0 +1,877 @@
+-- Rich Thorium Vein
+-- FULL `gameobject_loot_template` of Entry 175404
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 175404);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(175404, 9262, 0, 0.09, 0, 1, 0, 1, 2, ''),
+(175404, 108298, 0, 0.2, 0, 1, 0, 7, 20, ''),
+(175404, 12361, 0, 3, 0, 1, 0, 1, 1, ''),
+(175404, 12364, 0, 3, 0, 1, 0, 1, 1, ''),
+(175404, 12799, 0, 3, 0, 1, 0, 1, 1, ''),
+(175404, 12800, 0, 3, 0, 1, 0, 1, 1, ''),
+(175404, 7910, 0, 4, 0, 1, 0, 1, 1, ''),
+(175404, 12363, 0, 12, 0, 1, 0, 1, 1, ''),
+(175404, 10620, 0, 99, 0, 1, 0, 2, 10, ''),
+(175404, 12365, 0, 99, 0, 1, 0, 1, 12, '');
+
+--Rich Trillium Vein
+-- FULL `gameobject_loot_template` of Entry 209330
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 209330);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(209330, 103643, 0, 0.13, 0, 1, 0, 1, 1, ''),
+(209330, 76131, 0, 0.12, 0, 1, 0, 1, 1, ''),
+(209330, 76138, 0, 0.14, 0, 1, 0, 1, 1, ''),
+(209330, 76139, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(209330, 76142, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(209330, 76141, 0, 0.19, 0, 1, 0, 1, 1, ''),
+(209330, 76140, 0, 0.19, 0, 1, 0, 1, 1, ''),
+(209330, 76130, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 76134, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 76135, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 76136, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 76133, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 76137, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(209330, 72094, 0, 57, 0, 1, 0, 2, 14, ''),
+(209330, 72103, 0, 58, 0, 1, 0, 2, 14, '');
+
+--Rich Trillium Vein
+-- FULL `gameobject_loot_template` of Entry 221540
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 221540);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(221540, 103643, 0, 6, 0, 1, 0, 1, 1, ''),
+(221540, 76131, 0, 0.13, 0, 1, 0, 1, 1, ''),
+(221540, 76138, 0, 0.18, 0, 1, 0, 1, 1, ''),
+(221540, 76139, 0, 0.09, 0, 1, 0, 1, 1, ''),
+(221540, 76142, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(221540, 76141, 0, 0.11, 0, 1, 0, 1, 1, ''),
+(221540, 76140, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(221540, 76130, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(221540, 76134, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(221540, 76135, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(221540, 76136, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(221540, 76133, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(221540, 76137, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(221540, 72094, 0, 49, 0, 1, 0, 2, 9, ''),
+(221540, 72103, 0, 51, 0, 1, 0, 2, 10, '');
+
+-- Rich Elementium Vein
+-- FULL `gameobject_loot_template` of Entry 202741
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202741);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202741, 108308, 0, 0.07, 0, 1, 0, 2, 40, ''),
+(202741, 67282, 0, 0.08, 0, 1, 0, 1, 1, ''),
+(202741, 52195, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52193, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52194, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52191, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52190, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52192, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202741, 52328, 0, 4, 0, 1, 0, 1, 2, ''),
+(202741, 52327, 0, 19, 0, 1, 0, 1, 2, ''),
+(202741, 52326, 0, 19, 0, 1, 0, 1, 2, ''),
+(202741, 52325, 0, 20, 0, 1, 0, 1, 2, ''),
+(202741, 52185, 0, 100, 0, 1, 0, 5, 12, '');
+
+-- Rich Adamantite Deposit
+-- FULL `gameobject_loot_template` of Entry 181569
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181569);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181569, 23441, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(181569, 23440, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(181569, 23438, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(181569, 23436, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(181569, 23439, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181569, 23437, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181569, 108302, 0, 0.9, 0, 1, 0, 8, 40, ''),
+(181569, 35229, 0, 1.4, 1, 1, 0, 1, 4, ''),
+(181569, 23107, 0, 1.5, 0, 1, 0, 1, 1, ''),
+(181569, 21929, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(181569, 23117, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(181569, 23112, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(181569, 23079, 0, 1.7, 0, 1, 0, 1, 1, ''),
+(181569, 23077, 0, 1.7, 0, 1, 0, 1, 1, ''),
+(181569, 23427, 0, 50, 0, 1, 0, 1, 7, ''),
+(181569, 22573, 0, 81, 0, 1, 0, 1, 8, ''),
+(181569, 23425, 0, 100, 0, 1, 0, 5, 12, '');
+
+-- Rich Adamantite Deposit
+-- FULL `gameobject_loot_template` of Entry 181570
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181570);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181570, 23441, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181570, 23440, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181570, 23438, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181570, 23436, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181570, 23439, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181570, 23437, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(181570, 108302, 0, 0.9, 0, 1, 0, 8, 40, ''),
+(181570, 35229, 0, 0.7, 1, 1, 0, 1, 4, ''),
+(181570, 23107, 0, 1.8, 0, 1, 0, 1, 1, ''),
+(181570, 21929, 0, 1.4, 0, 1, 0, 1, 1, ''),
+(181570, 23117, 0, 1.2, 0, 1, 0, 1, 1, ''),
+(181570, 23112, 0, 1.4, 0, 1, 0, 1, 1, ''),
+(181570, 23079, 0, 1.7, 0, 1, 0, 1, 1, ''),
+(181570, 23077, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(181570, 23427, 0, 51, 0, 1, 0, 1, 6, ''),
+(181570, 22573, 0, 74, 0, 1, 0, 1, 8, ''),
+(181570, 23425, 0, 87, 0, 1, 0, 5, 11, '');
+
+-- Rich True Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 228510
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 228510);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(228510, 111349, 0, 0.9, 0, 1, 0, 1, 1, ''),
+(228510, 109991, 0, 13, 0, 1, 0, 1, 10, ''),
+(228510, 115508, 0, 14, 0, 1, 0, 1, 5, ''),
+(228510, 120945, 0, 28, 0, 1, 0, 1, 3, ''),
+(228510, 109119, 0, 87, 0, 1, 0, 1, 20, '');
+
+-- Rich True Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 232545
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 232545);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(232545, 120945, 0, 28, 0, 1, 0, 1, 1, ''),
+(232545, 109991, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(232545, 109119, 0, 100, 0, 1, 0, 2, 18, ''),
+(232545, 115508, 0, 100, 0, 1, 0, 1, 5, '');
+
+-- Rich True Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 237357
+-- DELETE FROM `gameobject_loot_template` WHERE (Entry = 237357);
+-- INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+-- (237357, 111349, 0, 0.6, 0, 1, 0, 1, 1, ''),
+-- (237357, 120945, 0, 27, 0, 1, 0, 1, 3, ''),
+-- (237357, 109991, 0, 8, 0, 1, 0, 1, 8, ''),
+-- (237357, 109119, 0, 90, 0, 1, 0, 1, 4, ''),
+-- (237357, 115508, 0, 19, 0, 1, 0, 1, 3, '');
+
+-- Rich True Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 243315
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 243315);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(243315, 111349, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(243315, 109991, 0, 10, 0, 1, 0, 1, 9, ''),
+(243315, 127759, 0, 14, 0, 1, 0, 1, 6, ''),
+(243315, 120945, 0, 27, 0, 1, 0, 1, 3, ''),
+(243315, 115508, 0, 49, 0, 1, 0, 1, 3, ''),
+(243315, 109119, 0, 90, 0, 1, 0, 1, 4, '');
+
+-- Rich Kyparite Deposit
+-- FULL `gameobject_loot_template` of Entry 209329
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 209329);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(209329, 76130, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209329, 76136, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209329, 76134, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209329, 76142, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209329, 76139, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209329, 76141, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209329, 76135, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(209329, 76133, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(209329, 76137, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(209329, 76140, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(209329, 76131, 0, 0.07, 0, 1, 0, 1, 1, ''),
+(209329, 97546, 0, 1.7, 0, 1, 0, 1, 9, ''),
+(209329, 72093, 0, 100, 0, 1, 0, 1, 12, '');
+
+-- Rich Cobalt Deposit
+-- FULL `gameobject_loot_template` of Entry 189979
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 189979);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(189979, 36933, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(189979, 36927, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189979, 36924, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189979, 36930, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189979, 108305, 0, 0.9, 0, 1, 0, 8, 40, ''),
+(189979, 36921, 0, 0.9, 0, 1, 0, 1, 1, ''),
+(189979, 36918, 0, 0.9, 0, 1, 0, 1, 1, ''),
+(189979, 36920, 0, 1.4, 0, 1, 0, 1, 1, ''),
+(189979, 36923, 0, 1.4, 0, 1, 0, 1, 1, ''),
+(189979, 36932, 0, 1.5, 0, 1, 0, 1, 1, ''),
+(189979, 36929, 0, 1.5, 0, 1, 0, 1, 1, ''),
+(189979, 36926, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(189979, 36917, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(189979, 37701, 0, 65, 0, 1, 0, 1, 2, ''),
+(189979, 37705, 0, 65, 0, 1, 0, 1, 2, ''),
+(189979, 36909, 0, 99, 0, 1, 0, 5, 12, '');
+
+-- Rich Pyrite Deposit 
+-- FULL `gameobject_loot_template` of Entry 202740
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202740);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202740, 108309, 0, 0.02, 0, 1, 0, 9, 34, ''),
+(202740, 52193, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202740, 52195, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202740, 52191, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202740, 52190, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202740, 52194, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(202740, 52192, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(202740, 52328, 0, 14, 0, 1, 0, 1, 3, ''),
+(202740, 52325, 0, 19, 0, 1, 0, 1, 3, ''),
+(202740, 52183, 0, 99, 0, 1, 0, 5, 11, '');
+
+-- Rich Ghost Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 209328
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 209328);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(209328, 76139, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209328, 76131, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209328, 76141, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209328, 76140, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209328, 76142, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209328, 76138, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209328, 103643, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(209328, 76130, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(209328, 76134, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(209328, 76136, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(209328, 76137, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(209328, 76135, 0, 0.06, 0, 1, 0, 1, 1, ''),
+(209328, 97512, 0, 2, 0, 1, 0, 1, 13, ''),
+(209328, 72092, 0, 99, 0, 1, 0, 1, 12, '');
+
+-- Rich Ghost Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 221539
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 221539);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(221539, 76138, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(221539, 76139, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(221539, 76140, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(221539, 76142, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(221539, 76141, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(221539, 76133, 0, 0.06, 0, 1, 0, 1, 1, ''),
+(221539, 76131, 0, 0.06, 0, 1, 0, 1, 1, ''),
+(221539, 76134, 0, 0.07, 0, 1, 0, 1, 1, ''),
+(221539, 76137, 0, 0.08, 0, 1, 0, 1, 1, ''),
+(221539, 76136, 0, 0.09, 0, 1, 0, 1, 1, ''),
+(221539, 76135, 0, 0.1, 0, 1, 0, 1, 1, ''),
+(221539, 76130, 0, 0.11, 0, 1, 0, 1, 1, ''),
+(221539, 103643, 0, 5, 0, 1, 0, 1, 1, ''),
+(221539, 97512, 0, 6, 0, 1, 0, 1, 13, ''),
+(221539, 72092, 0, 98, 0, 1, 0, 1, 12, '');
+
+-- Rich Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 237360
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 237360);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(237360, 111349, 0, 1.1, 0, 1, 0, 1, 1, ''),
+(237360, 109992, 0, 10, 0, 1, 0, 1, 9, ''),
+(237360, 120945, 0, 28, 0, 1, 0, 1, 3, ''),
+(237360, 109118, 0, 89, 0, 1, 0, 1, 4, ''),
+(237360, 115508, 0, 98, 0, 1, 0, 1, 3, '');
+
+-- Rich Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 232543
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 232543);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(228543, 109992, 0, 0.04, 0, 1, 0, 3, 9, ''),
+(232543, 120945, 0, 28, 0, 1, 0, 1, 3, ''),
+(232543, 109118, 0, 89, 0, 1, 0, 1, 4, ''),
+(232543, 115508, 0, 98, 0, 1, 0, 1, 3, '');
+
+-- Rich Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 228564
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 228564);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(228564, 111349, 0, 1.8, 0, 1, 0, 1, 1, ''),
+(228564, 109992, 0, 12, 0, 1, 0, 1, 9, ''),
+(228564, 120945, 0, 28, 0, 1, 0, 1, 3, ''),
+(228564, 109118, 0, 88, 0, 1, 0, 1, 20, ''),
+(228564, 115508, 0, 88, 0, 1, 0, 1, 5, '');
+
+-- Rich Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 243312
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 243312);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(243312, 111349, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(243312, 109992, 0, 10, 0, 1, 0, 1, 10, ''),
+(243312, 127759, 0, 14, 0, 1, 0, 1, 6, ''),
+(243312, 120945, 0, 28, 0, 1, 0, 1, 3, ''),
+(243312, 109118, 0, 90, 0, 1, 0, 1, 4, ''),
+(243312, 115508, 0, 99, 0, 1, 0, 1, 3, '');
+
+-- Rich Saronite Deposit
+-- FULL `gameobject_loot_template` of Entry 189981
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 189981);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(189981, 108306, 0, 0.6, 0, 1, 0, 8, 40, ''),
+(189981, 36927, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189981, 36924, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189981, 36933, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189981, 36930, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189981, 36918, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(189981, 36921, 0, 0.9, 0, 1, 0, 1, 1, ''),
+(189981, 36932, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 36926, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 36920, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 36929, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 36917, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 36923, 0, 8, 0, 1, 0, 1, 1, ''),
+(189981, 37703, 0, 50, 0, 1, 0, 1, 8, ''),
+(189981, 37701, 0, 50, 0, 1, 0, 1, 8, ''),
+(189981, 36912, 0, 99, 0, 1, 0, 5, 12, '');
+
+-- Rich Leystone Deposit
+-- FULL `gameobject_loot_template` of Entry 245324
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 245324);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(245324, 124492, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(245324, 124499, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(245324, 128769, 0, 1.9, 0, 1, 0, 1, 3, ''),
+(245324, 124124, 0, 4, 0, 1, 0, 1, 1, ''),
+(245324, 123918, 0, 100, 0, 1, 0, 1, 2, '');
+
+-- Rich Felslate Deposit
+-- FULL `gameobject_loot_template` of Entry 245325
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 245325);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(245325, 124124, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(245325, 124499, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(245325, 124498, 0, 1.5, 0, 1, 0, 1, 1, ''),
+(245325, 123919, 0, 100, 0, 1, 0, 1, 3, '');
+
+-- Rich Obsidium Deposit
+-- FULL `gameobject_loot_template` of Entry 202739
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202739);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202739, 108307, 0, 0.03, 0, 1, 0, 6, 39, ''),
+(202739, 52195, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202739, 52190, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202739, 52194, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202739, 52191, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202739, 52193, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202739, 52192, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202739, 52328, 0, 4, 0, 1, 0, 1, 2, ''),
+(202739, 52327, 0, 19, 0, 1, 0, 1, 4, ''),
+(202739, 53038, 0, 100, 0, 1, 0, 5, 12, '');
+
+-- Adamantite Deposit
+-- FULL `gameobject_loot_template` of Entry 181556
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181556);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181556, 23437, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(181556, 23441, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(181556, 23440, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(181556, 23438, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(181556, 23436, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(181556, 23439, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(181556, 23079, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181556, 23107, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181556, 23117, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181556, 23077, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181556, 23112, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181556, 21929, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(181556, 35229, 0, 1.3, 0, 1, 0, 1, 2, ''),
+(181556, 108302, 0, 1.3, 0, 1, 0, 4, 20, ''),
+(181556, 23427, 0, 30, 0, 1, 0, 1, 5, ''),
+(181556, 22673, 0, 31, 0, 1, 0, 1, 8, ''),
+(181556, 23426, 0, 100, 0, 1, 0, 3, 9, '');
+
+-- Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 1735
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 1735);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(1735, 7909, 0, 0.9, 0, 1, 1, 1, 1, NULL),
+(1735, 108297, 0, 1.1, 0, 1, 1, 9, 20, NULL),
+(1735, 4864, 0, 3, 0, 1, 1, 1, 1, NULL),
+(1735, 1705, 0, 3, 0, 1, 1, 1, 1, NULL),
+(1735, 1529, 0, 4, 0, 1, 1, 1, 1, NULL),
+(1735, 2772, 0, 98, 0, 1, 1, 2, 9, NULL),
+(1735, 2838, 0, 99, 0, 1, 1, 1, 10, NULL);
+
+-- True Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 228493
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 228493);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(228493, 111349, 0, 11, 0, 1, 0, 1, 1, ''),
+(228493, 115508, 0, 13, 0, 1, 0, 1, 3, ''),
+(228493, 109991, 0, 14, 0, 1, 0, 1, 10, ''),
+(228493, 120945, 0, 15, 0, 1, 0, 1, 3, ''),
+(228493, 109119, 0, 86, 0, 1, 0, 1, 15, '');
+
+-- True Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 243314
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 243314);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(243314, 111349, 0, 0.3, 0, 1, 0, 1, 9, ''),
+(243314, 109991, 0, 8, 0, 1, 0, 1, 9, ''),
+(243314, 127759, 0, 8, 0, 1, 0, 1, 5, ''),
+(243314, 120945, 0, 15, 0, 1, 0, 1, 3, ''),
+(243314, 115508, 0, 42, 0, 1, 0, 1, 1, ''),
+(243314, 109119, 0, 92, 0, 1, 0, 1, 4, '');
+
+-- True Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 232544
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 232544);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(232544, 109991, 0, 0.04, 0, 1, 0, 1, 9, ''),
+(232544, 120945, 0, 15, 0, 1, 0, 2, 8, ''),
+(232544, 109119, 0, 100, 0, 1, 0, 2, 8, ''),
+(232544, 115508, 0, 100, 0, 1, 0, 1, 3, '');
+
+-- True Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 237358
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 237358);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(237358, 111349, 0, 0.4, 0, 1, 0, 1, 9, ''),
+(237358, 109991, 0, 11, 0, 1, 0, 1, 9, ''),
+(237358, 120945, 0, 14, 0, 1, 0, 1, 3, ''),
+(237358, 115508, 0, 25, 0, 1, 0, 1, 3, ''),
+(237358, 109119, 0, 89, 0, 1, 0, 1, 12, '');
+
+-- Truesilver Deposit
+-- FULL `gameobject_loot_template` of Entry 2047
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 2047);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(2047, 108299, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(2047, 3864, 0, 3, 0, 1, 0, 1, 1, ''),
+(2047, 7910, 0, 3, 0, 1, 0, 1, 1, ''),
+(2047, 7909, 0, 5, 0, 1, 0, 1, 1, ''),
+(2047, 7911, 0, 99, 0, 1, 0, 2, 8, '');
+
+-- Kyparite Deposit
+-- FULL `gameobject_loot_template` of Entry 209312
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 209312);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(209312, 76135, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76142, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76138, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76139, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76131, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76141, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209312, 76130, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209312, 76134, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209312, 76136, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209312, 76133, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209312, 76140, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209312, 76137, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209312, 97546, 0, 1.9, 0, 1, 0, 1, 11, ''),
+(209312, 72093, 0, 100, 0, 1, 0, 1, 9, '');
+
+-- Cobalt Deposit
+-- FULL `gameobject_loot_template` of Entry 189978
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 189978);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(189978, 36921, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(189978, 36924, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(189978, 36930, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(189978, 36918, 0, 0.2, 0, 1, 0, 1, 1, ''),
+(189978, 36927, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189978, 36933, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189978, 36923, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(189978, 36932, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189978, 36926, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189978, 36920, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189978, 36929, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189978, 36917, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189978, 108305, 0, 1, 0, 1, 0, 4, 20, ''),
+(189978, 37705, 0, 29, 0, 1, 0, 1, 2, ''),
+(189978, 37701, 0, 30, 0, 1, 0, 1, 2, ''),
+(189978, 36909, 0, 99, 0, 1, 0, 2, 9, '');
+
+-- Pyrite Deposit
+-- FULL `gameobject_loot_template` of Entry 202737
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202737);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202737, 52195, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202737, 52190, 0, 0.15, 0, 1, 0, 1, 1, ''),
+(202737, 52194, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202737, 52191, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202737, 52192, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202737, 52193, 0, 0.18, 0, 1, 0, 1, 1, ''),
+(202737, 52328, 0, 7, 0, 1, 0, 1, 2, ''),
+(202737, 52325, 0, 10, 0, 1, 0, 1, 2, ''),
+(202737, 52183, 0, 100, 0, 1, 0, 2, 8, '');
+
+-- Obsidium Deposit
+-- FULL `gameobject_loot_template` of Entry 202736
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202736);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202736, 52195, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202736, 52190, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202736, 52192, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202736, 52193, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202736, 52194, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202736, 52191, 0, 0.18, 0, 1, 0, 1, 1, ''),
+(202736, 108307, 0, 0.2, 0, 1, 0, 3, 20, ''),
+(202736, 52328, 0, 1.8, 0, 1, 0, 1, 2, ''),
+(202736, 52327, 0, 10, 0, 1, 0, 1, 2, ''),
+(202736, 53038, 0, 99, 0, 1, 0, 2, 9, '');
+
+-- Fel Iron Deposit 
+-- FULL `gameobject_loot_template` of Entry 181555
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181555);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181555, 23438, 0, 0.11, 0, 1, 0, 1, 1, ''),
+(181555, 23441, 0, 0.11, 0, 1, 0, 1, 1, ''),
+(181555, 23440, 0, 0.12, 0, 1, 0, 1, 1, ''),
+(181555, 23437, 0, 0.13, 0, 1, 0, 1, 1, ''),
+(181555, 23436, 0, 0.14, 0, 1, 0, 1, 1, ''),
+(181555, 23439, 0, 0.14, 0, 1, 0, 1, 1, ''),
+(181555, 23079, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 23107, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 21929, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 23117, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 23077, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 23112, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(181555, 35229, 0, 0.7, 0, 1, 0, 1, 2, ''),
+(181555, 108301, 0, 1, 0, 1, 0, 5, 20, ''),
+(181555, 23427, 0, 6, 0, 1, 0, 1, 5, ''),
+(181555, 22574, 0, 29, 0, 1, 0, 1, 2, ''),
+(181555, 22573, 0, 29, 0, 1, 0, 1, 2, ''),
+(181555, 23424, 0, 98, 0, 1, 0, 2, 9, '');
+
+-- Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 228563
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 228563);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(228563, 111349, 0, 1.5, 0, 1, 0, 1, 1, ''),
+(228563, 109992, 0, 15, 0, 1, 0, 1, 10, ''),
+(228563, 120945, 0, 15, 0, 1, 0, 1, 3, ''),
+(228563, 115508, 0, 80, 0, 1, 0, 1, 3, ''),
+(228563, 109118, 0, 85, 0, 1, 0, 1, 15, '');
+
+-- Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 232542
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 232542);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(232542, 109992, 0, 0.04, 0, 1, 0, 1, 10, ''),
+(232542, 120945, 0, 15, 0, 1, 0, 1, 3, ''),
+(232542, 115508, 0, 100, 0, 1, 0, 1, 3, ''),
+(232542, 109118, 0, 100, 0, 1, 0, 2, 15, '');
+
+-- Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 237359
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 237359);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(237359, 111349, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(237359, 109992, 0, 12, 0, 1, 0, 1, 9, ''),
+(237359, 120945, 0, 16, 0, 1, 0, 1, 3, ''),
+(237359, 115508, 0, 99, 0, 1, 0, 1, 3, ''),
+(237359, 109118, 0, 88, 0, 1, 0, 1, 4, '');
+
+-- Blackrock Deposit
+-- FULL `gameobject_loot_template` of Entry 243313
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 243313);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(243313, 111349, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(243313, 109992, 0, 8, 0, 1, 0, 1, 10, ''),
+(243313, 127759, 0, 8, 0, 1, 0, 1, 5, ''),
+(243313, 120945, 0, 15, 0, 1, 0, 1, 3, ''),
+(243313, 115508, 0, 99, 0, 1, 0, 1, 3, ''),
+(243313, 109118, 0, 92, 0, 1, 0, 1, 4, '');
+
+-- Saronite Deposit
+-- FULL `gameobject_loot_template` of Entry 189980
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 189980);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(189980, 36921, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 36933, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 36918, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 36927, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 36924, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 36930, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(189980, 108306, 0, 0.5, 0, 1, 0, 3, 20, ''),
+(189980, 36932, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 36926, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 36920, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 36929, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 36917, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 36923, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(189980, 37703, 0, 44, 0, 1, 0, 1, 2, ''),
+(189980, 37701, 0, 45, 0, 1, 0, 1, 2, ''),
+(189980, 36912, 0, 99, 0, 1, 0, 2, 9, '');
+
+-- Titanium Vein
+-- FULL `gameobject_loot_template` of Entry 191133
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 191133);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(191133, 108391, 0, 0.7, 0, 1, 0, 3, 20, ''),
+(191133, 36921, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(191133, 36924, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(191133, 36933, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(191133, 36930, 0, 1.6, 0, 1, 0, 1, 1, ''),
+(191133, 36927, 0, 1.7, 0, 1, 0, 1, 1, ''),
+(191133, 36918, 0, 1.7, 0, 1, 0, 1, 1, ''),
+(191133, 36932, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 36926, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 36920, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 36929, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 36917, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 36923, 0, 8, 0, 1, 0, 1, 1, ''),
+(191133, 37701, 0, 49, 0, 1, 0, 1, 6, ''),
+(191133, 37702, 0, 50, 0, 1, 0, 1, 6, ''),
+(191133, 37700, 0, 50, 0, 1, 0, 1, 6, ''),
+(191133, 37705, 0, 50, 0, 1, 0, 1, 6, ''),
+(191133, 36910, 0, 99, 0, 1, 0, 2, 8, '');
+
+-- Dark Iron Deposit
+-- FULL `gameobject_loot_template` of Entry 165658
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 165658);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(165658, 11754, 0, 0.5, 0, 1, 0, 1, 1, ''),
+(165658, 9262, 0, 1, 0, 1, 0, 1, 1, ''),
+(165658, 11382, 0, 1, 0, 1, 0, 1, 1, ''),
+(165658, 11370, 0, 100, 0, 1, 0, 2, 9, '');
+
+-- Gold Vein
+-- FULL `gameobject_loot_template` of Entry 1734
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 1734);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(1734, 108296, 0, 0.7, 0, 1, 0, 1, 1, NULL),
+(1734, 3864, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1734, 1529, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1734, 1705, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1734, 2776, 0, 99, 0, 1, 0, 2, 8, NULL);
+
+-- Khorium Vein
+-- FULL `gameobject_loot_template` of Entry 181557
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181557);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181557, 35229, 0, 1.2, 0, 1, 0, 4, 5, ''),
+(181557, 108304, 0, 1.9, 0, 1, 0, 4, 20, ''),
+(181557, 23437, 0, 1.9, 0, 1, 0, 1, 1, ''),
+(181557, 23441, 0, 2, 0, 1, 0, 1, 1, ''),
+(181557, 23440, 0, 2, 0, 1, 0, 1, 1, ''),
+(181557, 23438, 0, 2, 0, 1, 0, 1, 1, ''),
+(181557, 23436, 0, 2, 0, 1, 0, 1, 1, ''),
+(181557, 23439, 0, 2, 0, 1, 0, 1, 1, ''),
+(181557, 23079, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 23107, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 21929, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 23117, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 23077, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 23112, 0, 6, 0, 1, 0, 1, 1, ''),
+(181557, 23427, 0, 30, 0, 1, 0, 1, 6, ''),
+(181557, 23426, 0, 98, 0, 1, 0, 2, 8, ''),
+(181557, 22574, 0, 99, 0, 1, 0, 1, 5, ''),
+(181557, 22573, 0, 99, 0, 1, 0, 1, 5, '');
+
+-- Small Thorium Vein
+-- FULL `gameobject_loot_template` of Entry 324
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 324);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(324, 11513, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(324, 108298, 0, 0.7, 0, 1, 0, 7, 20, ''),
+(324, 12361, 0, 2, 0, 1, 0, 1, 1, ''),
+(324, 12364, 0, 2, 0, 1, 0, 1, 1, ''),
+(324, 12799, 0, 2, 0, 1, 0, 1, 1, ''),
+(324, 12800, 0, 2, 0, 1, 0, 1, 1, ''),
+(324, 9262, 0, 3, 0, 1, 0, 1, 1, ''),
+(324, 7910, 0, 3, 0, 1, 0, 1, 1, ''),
+(324, 12363, 0, 9, 0, 1, 0, 1, 1, ''),
+(324, 10620, 0, 98, 0, 1, 0, 2, 8, ''),
+(324, 12365, 0, 99, 0, 1, 0, 1, 10, '');
+
+-- Copper Vein
+-- FULL `gameobject_loot_template` of Entry 1731
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 1731);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(1731, 818, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1731, 774, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1731, 1210, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1731, 2835, 0, 80, 0, 1, 0, 1, 11, NULL),
+(1731, 2770, 0, 100, 0, 1, 0, 1, 9, NULL);
+
+-- Copper Vein
+-- FULL `gameobject_loot_template` of Entry 181248
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181248);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181248, 818, 0, 0.3, 0, 1, 0, 1, 1, ''),
+(181248, 774, 0, 1, 0, 1, 0, 1, 1, ''),
+(181248, 1210, 0, 5, 0, 1, 0, 1, 1, ''),
+(181248, 22634, 0, 27, 0, 1, 0, 1, 6, ''),
+(181248, 2835, 0, 84, 0, 1, 0, 1, 6, ''),
+(181248, 2770, 0, 98, 0, 1, 0, 2, 5, '');
+
+-- Mithril Deposit
+-- FULL `gameobject_loot_template` of Entry 2040
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 2040);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(2040, 108300, 0, 0.9, 0, 1, 0, 9, 20, ''),
+(2040, 9262, 0, 3, 0, 1, 0, 1, 1, ''),
+(2040, 3864, 0, 3, 0, 1, 0, 1, 1, ''),
+(2040, 7910, 0, 3, 0, 1, 0, 1, 1, ''),
+(2040, 7909, 0, 3, 0, 1, 0, 1, 1, ''),
+(2040, 7912, 0, 80, 0, 1, 0, 1, 13, ''),
+(2040, 3858, 0, 98, 0, 1, 0, 2, 9, '');
+
+-- Tin Vein
+-- FULL `gameobject_loot_template` of Entry 1732
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 1732);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(1732, 1529, 0, 1, 0, 1, 0, 1, 1, NULL),
+(1732, 1705, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1732, 1210, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1732, 1206, 0, 4, 0, 1, 0, 1, 1, NULL),
+(1732, 2836, 0, 80, 0, 1, 0, 1, 13, NULL),
+(1732, 2771, 0, 99, 0, 1, 0, 2, 9, NULL);
+DELETE FROM `gameobject` WHERE (guid = 5526);
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnMask`, `PhaseId`, `PhaseGroup`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `ScriptName`, `VerifiedBuild`) VALUES
+(5526, 1732, 0, 0, 0, 1, 169, 0, -8850, -1905, 125.96, 4.143, 0, 0, 0.877245, -0.480043, 900, 100, 1, '', 0);
+
+-- Tin Vein 
+-- FULL `gameobject_loot_template` of Entry 181249
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181249);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181249, 1210, 0, 1.3, 0, 1, 0, 1, 1, ''),
+(181249, 1206, 0, 3, 0, 1, 0, 1, 1, ''),
+(181249, 1705, 0, 4, 0, 1, 0, 1, 1, ''),
+(181249, 22634, 0, 17, 1, 1, 0, 1, 2, ''),
+(181249, 2836, 0, 67, 0, 1, 0, 1, 8, ''),
+(181249, 2771, 0, 99, 0, 1, 0, 2, 4, '');
+
+-- Silver Vein
+-- FULL `gameobject_loot_template` of Entry 1733
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 1733);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(1733, 108294, 0, 0.4, 0, 1, 0, 14, 20, NULL),
+(1733, 1705, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1733, 1210, 0, 3, 0, 1, 0, 1, 1, NULL),
+(1733, 1206, 0, 5, 0, 1, 0, 1, 1, NULL),
+(1733, 2775, 0, 99, 0, 1, 0, 2, 8, NULL);
+
+-- Trillium Vein
+-- FULL `gameobject_loot_template` of Entry 209313
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 209313);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(209313, 76138, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209313, 76131, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209313, 76141, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209313, 76140, 0, 0.01, 0, 1, 0, 1, 1, ''),
+(209313, 76135, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209313, 76137, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209313, 76142, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209313, 76139, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(209313, 76130, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209313, 76134, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209313, 76136, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209313, 76133, 0, 0.03, 0, 1, 0, 1, 1, ''),
+(209313, 103643, 0, 0.07, 0, 1, 0, 1, 1, ''),
+(209313, 72094, 0, 50, 0, 1, 0, 1, 8, ''),
+(209313, 72103, 0, 50, 0, 1, 0, 1, 8, '');
+
+-- Trillium Vein
+-- FULL `gameobject_loot_template` of Entry 221541
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 221541);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(221541, 76134, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(221541, 76130, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(221541, 76142, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(221541, 76137, 0, 0.04, 0, 1, 0, 1, 1, ''),
+(221541, 76135, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(221541, 76131, 0, 0.02, 0, 1, 0, 1, 1, ''),
+(221541, 76136, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(221541, 76133, 0, 0.11, 0, 1, 0, 1, 1, ''),
+(221541, 103643, 0, 5, 0, 1, 0, 1, 1, ''),
+(221541, 72094, 0, 50, 0, 1, 0, 1, 8, ''),
+(221541, 72103, 0, 50, 0, 1, 0, 1, 7, '');
+
+-- Elementium Vein
+-- FULL `gameobject_loot_template` of Entry 202738
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 202738);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(202738, 67282, 0, 0.05, 0, 1, 0, 1, 1, ''),
+(202738, 108308, 0, 0.06, 0, 1, 0, 1, 20, ''),
+(202738, 52195, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202738, 52194, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202738, 52191, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202738, 52190, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202738, 52192, 0, 0.16, 0, 1, 0, 1, 1, ''),
+(202738, 52193, 0, 0.17, 0, 1, 0, 1, 1, ''),
+(202738, 52328, 0, 2, 0, 1, 0, 1, 2, ''),
+(202738, 52325, 0, 10, 0, 1, 0, 1, 2, ''),
+(202738, 52327, 0, 10, 0, 1, 0, 1, 2, ''),
+(202738, 52326, 0, 10, 0, 1, 0, 1, 2, ''),
+(202738, 52185, 0, 100, 0, 1, 0, 1, 9, '');
+
+-- Nethercite Deposit
+-- FULL `gameobject_loot_template` of Entry 185877
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 185877);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(185877, 23437, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 23441, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 23440, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 23438, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 23439, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 23436, 0, 0.4, 0, 1, 0, 1, 1, ''),
+(185877, 32506, 0, 1, 0, 1, 0, 1, 1, ''),
+(185877, 23079, 0, 1.2, 0, 1, 0, 1, 1, ''),
+(185877, 23107, 0, 1.2, 0, 1, 0, 1, 1, ''),
+(185877, 23077, 0, 1.2, 0, 1, 0, 1, 1, ''),
+(185877, 23112, 0, 1.2, 0, 1, 0, 1, 1, ''),
+(185877, 21929, 0, 1.3, 0, 1, 0, 1, 1, ''),
+(185877, 23117, 0, 1.3, 0, 1, 0, 1, 1, ''),
+(185877, 23427, 0, 6, 0, 1, 0, 1, 4, ''),
+(185877, 22574, 0, 10, 0, 1, 0, 2, 6, ''),
+(185877, 22573, 0, 10, 0, 1, 0, 2, 6, ''),
+(185877, 32464, 0, 99, 0, 1, 0, 2, 4, '');
+
+-- Large Obsidian Chunk
+-- FULL `gameobject_loot_template` of Entry 181069
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 181069);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(181069, 12363, 0, 0.6, 0, 1, 0, 1, 1, ''),
+(181069, 12800, 0, 0.7, 0, 1, 0, 1, 1, ''),
+(181069, 12364, 0, 0.8, 0, 1, 0, 1, 1, ''),
+(181069, 7076, 0, 8, 0, 1, 0, 1, 1, ''),
+(181069, 22203, 0, 37, 0, 1, 0, 1, 5, ''),
+(181069, 22202, 0, 46, 0, 1, 0, 2, 7, '');
+
+-- Ancient Gem Vein
+-- FULL `gameobject_loot_template` of Entry 185557
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 185557);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(185557, 23438, 0, 8, 0, 1, 0, 1, 2, ''),
+(185557, 23439, 0, 8, 0, 1, 0, 1, 1, ''),
+(185557, 23441, 0, 9, 0, 1, 0, 1, 2, ''),
+(185557, 23440, 0, 9, 0, 1, 0, 1, 2, ''),
+(185557, 23437, 0, 10, 0, 1, 0, 1, 2, ''),
+(185557, 23436, 0, 10, 0, 1, 0, 1, 2, ''),
+(185557, 32231, 0, 17, 0, 1, 0, 1, 2, ''),
+(185557, 32228, 0, 17, 0, 1, 0, 1, 2, ''),
+(185557, 32249, 0, 17, 0, 1, 0, 1, 2, ''),
+(185557, 32229, 0, 17, 0, 1, 0, 1, 3, ''),
+(185557, 32230, 0, 17, 0, 1, 0, 1, 2, ''),
+(185557, 32227, 0, 18, 0, 1, 0, 1, 2, ''),
+(185557, 34907, 0, 98, 0, 1, 0, 1, 9, '');
+
+-- Pure Saronite Deposit
+-- FULL `gameobject_loot_template` of Entry 195036
+DELETE FROM `gameobject_loot_template` WHERE (Entry = 195036);
+INSERT INTO `gameobject_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES
+(195036, 36920, 0, 6, 0, 1, 0, 5, 5, ''),
+(195036, 36917, 0, 8, 0, 1, 0, 4, 6, ''),
+(195036, 36929, 0, 10, 0, 1, 0, 4, 7, ''),
+(195036, 36926, 0, 11, 0, 1, 0, 4, 7, ''),
+(195036, 36918, 0, 15, 0, 1, 0, 1, 5, ''),
+(195036, 36933, 0, 21, 0, 1, 0, 1, 3, ''),
+(195036, 36932, 0, 24, 0, 1, 0, 4, 7, ''),
+(195036, 36927, 0, 24, 0, 1, 0, 1, 3, ''),
+(195036, 36924, 0, 28, 0, 1, 0, 1, 3, ''),
+(195036, 36923, 0, 29, 0, 1, 0, 4, 9, ''),
+(195036, 36921, 0, 46, 0, 1, 0, 1, 4, ''),
+(195036, 36940, 0, 47, 0, 1, 0, 1, 3, ''),
+(195036, 35624, 0, 78, 0, 1, 0, 2, 4, ''),
+(195036, 35627, 0, 89, 0, 1, 0, 1, 2, ''),
+(195036, 36912, 0, 98, 0, 1, 0, 28, 33, '');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
